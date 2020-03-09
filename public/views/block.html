@@ -1,0 +1,90 @@
+<div class="inpager block-pager">
+  <div class="block-header">
+    <h4>
+      <img src="/img/icon-block.png" alt="" width="20">
+      区块
+      <small>{{ $state.current.data.pageSubTitle }}</small>
+    </h4>
+    <div class="table-auto">
+      <table width="100%">
+        <thead>
+          <tr>
+            <th width="30%">Height</th>
+            <th>
+              <strong ng-if="block.number">{{ $state.current.data.pageSubTitle }}</strong>
+              <span ng-if="!block.number" style="color:crimson">not exist</span>
+            </th>
+          </tr>
+        </thead>
+        <!-- <tbody ng-if="!block">
+          <tr>
+            <td>数据加载中...</td>
+          </tr>
+        </tbody> -->
+        <tbody>
+          <tr>
+            <td>Time </td>
+            <td>{{block.datetime | date:'yyyy-MM-dd HH:mm:ss Z' }} ({{block.timestamp | timeDuration}} ago)</td>
+          </tr>
+          <tr>
+            <td>Hash  </td>
+            <td><a href="/block/{{block.number - 1}}">{{block.parentHash}}</a></td>
+          </tr>
+          <tr>
+            <td>ParentHash  </td>
+            <td>{{block.parentHash}}</td>
+          </tr>
+          <tr>
+            <td>Sha3 Uncles  </td>
+            <td>{{block.sha3Uncles}}</td>
+          </tr>
+          <tr>
+            <td>Mined By </td>
+            <td><a href="/addr/{{block.miner}}">{{block.miner}}</a></td>
+          </tr>
+          <tr>
+            <td>Difficulty  </td>
+            <td>{{block.difficulty.toString()}}</td>
+          </tr>
+          <tr>
+            <td>Total Difficulty  </td>
+            <td>{{block.totalDifficulty | teraHashes | number}} TH</td>
+          </tr>
+          <tr>
+            <td>Gas Limit  </td>
+            <td>{{block.gasLimit | number}}</td>
+          </tr>
+          <tr>
+            <td>Gas Used </td>
+            <td>{{block.gasUsed | number}}</td>
+          </tr>
+          <tr>
+            <td>Nonce </td>
+            <td>{{block.nonce | number}}</td>
+          </tr>
+          <tr>
+            <td>Masternode	</td>
+            <td><a href="/masternode/{{block.witness}}">{{block.witness}}</a></td>
+          </tr>
+          <tr>
+            <td>Extra Data</td>
+            <td>{{block.extraData}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Begin: Transaction Datatable -->
+  <div class="block-transact">
+    <h4><i class="icon-bar-chart font-white"></i> 交易次数</h4>
+    <div class="portlet-body">
+      <table class="table table-condensed">
+        <tbody>
+          <tr ng-repeat="t in block.txs">
+            <td> <a href="/tx/{{t}}">{{t}}</a> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div><!-- End: portlet -->
+</div>

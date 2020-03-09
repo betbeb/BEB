@@ -1,0 +1,317 @@
+html,body {
+  background-color: #004531;
+}
+a {
+  opacity: .9;
+}
+a:hover {
+  opacity: 1;
+}
+.portlet-body td a {
+  color: yellow;
+}
+.portlet-body td a:hover {
+  color: #fff;
+}
+.font-green {
+  color: #fff !important;
+}
+
+.page-content {
+  background: url(../img/bg-content.jpg) no-repeat bottom center #017a5a;
+  padding: 32px 0;
+}
+.block-info {
+  position: relative;
+}
+.block-info h3 {
+  font-size: 24px;
+  color: #fff;
+  line-height: 40px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.block-info-wrapper {
+  position: relative;
+  padding-top: 10px;
+}
+.block-info-wrapper h5 {
+  color: #fff;
+  height: 34px;
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.block-info-wrapper strong {
+  height: 70px;
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  color: #fff100;
+  font-weight: bold;
+}
+.block-info-wrapper td small {
+  font-size: 80%;
+}
+
+.btn-rest {
+  background: none !important;
+  border-color: #fff !important;
+  border-radius: 200px !important;
+}
+
+.btn-rest:hover {
+  color: yellow;
+  border-color: yellow !important;
+}
+.text-white {
+  color: #fff !important;
+}
+.contpager b {
+  color: #fff;
+}
+.portlet.light.col-md-12 .portlet-body .col-md-6.table th,
+.portlet.light.col-md-12 .portlet-body .col-md-6.table td {
+  color: #fff;
+}
+.portlet.light>.portlet-title>.caption.caption-md>.caption-subject {
+  font-size: 20px;
+}
+.todo-tasklist-item {
+  background-color: #fff;
+  min-height: 84px;
+  border-radius: 6px !important;
+  box-sizing: border-box;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 5px;
+}
+.todo-tasklist-item:nth-child(2) {
+  position: relative;
+  z-index: 10;
+}
+.todo-tasklist-controls {
+  height: 52px;
+  margin: 0;
+}
+.todo-boxs {
+  height: 52px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  border-right: 1px solid #e5e5e5;
+}
+.todo-tasklist-date {
+  line-height: 1.2em;
+}
+.todo-tasklist-item-title a,
+.todo-tasklist-item-text a {
+  color: #0e9873;
+}
+.general-item-list>.item {
+  background-color: #fff;
+  min-height: 84px;
+  border-radius: 6px !important;
+  box-sizing: border-box;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+  width: 100%;
+}
+.general-item-list>.item:last-child {
+  margin-bottom: 0;
+}
+.general-item-list .todo-tasklist-controls {
+  border-right: 1px solid #e5e5e5;
+}
+.general-item-list .item-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 74px;
+}
+.general-item-list .todo-tasklist-controls {
+  height: 74px;
+}
+.inpager {
+  border-radius: 6px !important;
+  background: linear-gradient(to bottom, #2fbe96, rgba(8, 144, 104, .8));
+  position: relative;
+  z-index: 10;
+  padding: 22px;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+.block-header {
+  position: relative;
+}
+.table-auto {
+  overflow: auto;
+}
+.block-pager h4 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+}
+.block-pager h4 i {
+  font-size: 18px;
+}
+.block-pager h4 small {
+  color: #fff;
+}
+.block-header table {
+  background-color: #fff;
+  min-width: 510px;
+}
+.block-header th,
+.block-header td {
+  padding: 10px 20px;
+  color: #000;
+  line-height: 1.5em;
+}
+.block-header th {
+  background-color: #eeeeee;
+}
+.block-header td {
+  border-bottom: 1px solid #e5e5e5;
+}
+.block-header strong,
+.block-header a {
+  color: #22a882;
+}
+.block-transact {
+  margin-top: 20px;
+}
+.address-pager h4 {
+  font-size: 18px;
+  color: #fff;
+}
+.address-pager h4 span {
+  font-size: 14px;
+  color: yellow;
+}
+.address-pager h4 b {
+  font-weight: 500;
+}
+.address-pager hr {
+  margin: 5px 0;
+}
+.adin-box {
+  padding-bottom: 15px;
+}
+.adin-info {
+  padding: 15px 0;
+  overflow: auto;
+}
+.adin-info b,
+.adin-info span {
+  color: #fff;
+  line-height: 1.5em;
+  padding: 4px 0;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.adin-info a {
+  color: #fff;
+}
+.adin-box {
+  overflow: hidden;
+}
+.adin-box .nav-tabs>li.active>a, 
+.adin-box .nav-tabs>li.active>a:focus, 
+.adin-box .nav-tabs>li.active>a:hover {
+  border: none;
+  background: none;
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+.adin-box .nav-pills>li>a, .nav-tabs>li>a {
+  color: #fff;
+}
+.adin-box .nav-tabs>li>a:hover {
+  color: #333;
+  transition: all 0.3s;
+}
+.pager .previous>a, .pager .previous>span,
+.pager .next>a, .pager .next>span {
+  float: none;
+}
+.alltransact {
+  min-height: 500px;
+}
+.alltransact th {
+  background-color: #eeeeee;
+  border-bottom: 2px solid #159f78 !important;
+}
+.alltransact td {
+  background-color: #fff;
+}
+.tx-pager h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.tx-pager h4 span {
+  color: #fff;
+  font-size: 16px;
+  color: yellow;
+  text-decoration: underline;
+}
+.tx-tab {
+  padding: 15px 0;
+}
+.tx-pager {
+  min-height: 500px;
+}
+.tx-pager td,
+.tx-pager th {
+  background-color: #fff;
+}
+.dataTables_filter,
+.dataTables_length,
+.dataTables_info {
+  color: #fff !important;
+}
+.table-scrollable {
+  background-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .scrollable {
+    min-height: 930px;
+    height: auto;
+  }
+  .general-item-list .todo-tasklist-controls {
+    height: auto;
+    padding-bottom: 5px;
+  }
+  .general-item-list .item-head {
+    justify-content: start;
+    height: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .todo-tasklist-item {
+    padding: 10px;
+  }
+  .todo-boxs {
+    height: auto;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+  .address-pager h4 span,
+  .tx-pager h4 span  {
+    font-size: 12px;
+  }
+}

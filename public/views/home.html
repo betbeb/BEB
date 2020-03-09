@@ -1,0 +1,118 @@
+
+<div class="block-info">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>区块高度</h3>
+      <div class="dataStatistics"></div>
+    </div>
+    <div class="col-md-6">
+      <div class="block-info-wrapper">
+        <div class="row">
+          <div class="col-xs-6">
+            <h5>区块确认</h5>
+            <strong>{{ blockTime ? blockTime : '0' }} <small>s</small></strong>
+          </div>
+          <div class="col-xs-6">
+            <h5>TPS</h5>
+            <strong>{{ TPS ? TPS : '0' }} <small>T/S</small></strong>
+          </div>
+          <div class="col-xs-6">
+            <h5>平均奖励</h5>
+            <strong>{{ meanDayRewards ? meanDayRewards : '0' }}</strong>
+          </div>
+          <div class="col-xs-6">
+            <h5>今日奖励</h5>
+            <strong>{{ todayRewards ? todayRewards : '0' }}</strong>
+          </div>
+          <!-- <div class="col-sm-4">
+            <h5>主节点总数</h5>
+            <strong>{{ totalNodes }}</strong>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br class="hidden-xs">
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+      <!-- BEGIN PORTLET-->
+      <div class="portlet light">
+          <div class="portlet-title">
+              <div class="caption caption-md">
+                <img src="/img/icon-block.png" alt="" width="14">
+                <span class="caption-subject font-white bold uppercase">最新区块</span>
+              </div>
+              <div class="actions">
+                  <div class="btn-group">
+                      <a class="btn btn-primary btn-rest" ng-click="reloadBlocks()">刷新 ↑↓</a>
+                  </div>
+              </div>
+          </div>
+          <div class="portlet-body">
+              <div class="todo-tasklist scrollable" id="newblock">
+                  <div 
+                    ng-repeat="t in latest_blocks track by $index" 
+                    class="todo-tasklist-item item-border-green" 
+                    ng-class="(t.extraData.indexOf('Parity') > -1) ? 'item-border-red': '';(t.extraData.indexOf('Pool') > -1) ? 'item-border-blue': ''">
+                      <!--TODO: color by known miners -->
+                      <div class="row">
+                        <div class="todo-boxs col-sm-5">
+                          <span class="todo-tasklist-item-title"><i class="fa fa-cube"></i> <a href="/block/{{t.number}}">{{t.number}}</a></span><br>
+                            <span class="todo-tasklist-date">
+                                <i class="fa fa-hourglass-o"></i>{{t.timestamp | timeDuration }} ago</span>
+                        </div>
+                        <div class="todo-tasklist-controls col-sm-7">
+                            <div class="todo-tasklist-item-text"><a href="/addr/{{t.miner}}">{{t.extraData}}</a><br>
+                            by <a href="/addr/{{t.miner}}">{{t.miner}}</a><br>
+                            transactions: {{t.txs.length}}
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- END PORTLET-->
+  </div>
+  <div class="col-md-6 col-sm-6" >
+      <!-- BEGIN PORTLET-->
+      <div class="portlet light">
+          <div class="portlet-title">
+              <div class="caption caption-md">
+                  <i class="icon-bar-chart font-white"></i>
+                  <span class="caption-subject font-white bold uppercase">交易/投票共识</span>
+              </div>
+              <div class="actions">
+                  <div class="btn-group">
+                      <a class="btn btn-primary btn-rest" ng-click="reloadTransactions()">刷新 ↑↓</a>
+                  </div>
+              </div>                    
+          </div>
+          <div class="portlet-body">
+              <div class="general-item-list scrollable" id="newextend">
+                <div class="item"  ng-repeat="t in latest_txs track by $index">
+                  <div class="row">
+                    <div class="todo-tasklist-controls col-sm-9"> 
+                      <div class="truncate-txhash" style="float:left">
+                          TX <a href="/tx/{{t.hash}}" class="primary-link">{{t.hash}}</a>
+                      </div>
+                      <span class="todo-tasklist-item-text">From <a href="/addr/{{t.from}}">{{t.from.substr(0,24)}}...</a></span> 
+                      <span class="todo-tasklist-item-text">To <a href="/addr/{{t.to}}">{{t.to.substr(0,24)}}...</a></span><br>
+                      <div class="todo-tasklist-item-text">{{ t.value > 0 ? t.value + 'BEB' : '投1票'}}</div>
+                    </div>
+                    <div class="item-head col-sm-3">
+                        <div class="item-date" style="float:right">
+                          <span ng-show="tx.status==0"  alt="transaction fail">
+                            <image src="img/FAIL.png"/>
+                          </span> {{t.timestamp | timeDuration }} ago
+                        </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      </div>
+      <!-- END PORTLET-->
+  </div>
+</div>

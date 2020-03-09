@@ -1,0 +1,82 @@
+<header class="page-header">
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+          <i class="glyphicon glyphicon-th-list"></i>
+        </button>
+        <a class="navbar-brand" href="/"><img src="/img/explorer-logo.png" alt=""></a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="http://www.betbeb.com/" target="_blank">官网</a></li>
+            <li><a href="/contractlist" target="_blank">智能合约</a></li>
+            <li><a href="/tokenlist" target="_blank">代币</a></li>
+            <li><a href="http://www.betbeb.com/download.html" target="_blank">钱包</a></li>
+            <li><a href="https://github.com/betbeb/BEB" target="_blank">开源</a></li>
+          <li class="dropdown">
+            <a 
+              data-hover="dropdown"
+              data-close-others="true"
+              href="/contractlist" 
+              class="dropdown-toggle" 
+              data-toggle="dropdown">白皮书<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">中文白皮书</a></li>
+                <li><a href="#">White paper English</a></li>
+              </ul>
+          </li>
+        </ul>
+        <div class="nav navbar-nav navbar-right">
+          <div class="search">
+            <form name="form.searchForm" class="search-form">
+              <div class="input-group">
+                <input type="text" name="explorerSearch" class="form-control" placeholder="请输入钱包地址" ng-model="form.searchInput" ng-keyup="$event.keyCode == 13 ? searchQuery(form.searchInput) : null">
+                <span class="input-group-btn" ng-click="searchQuery(form.searchInput)">
+                  <button class="btn" type="button">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+          <ul class="nav navbar-nav langu-drop hidden-xs">
+            <li class="dropdown">
+              <a 
+                href="javascript:;" 
+                class="dropdown-toggle" 
+                data-hover="dropdown"
+                data-toggle="dropdown">简体中文<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">简体中文</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="panel-group change-lang visible-xs" id="accordion">
+            <div class="panel">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" 
+                     href="#collapseOne">
+                    简体中文<b class="caret"></b>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <p><a href="#">简体中文</a></p>
+                  <p><a href="#">English</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
